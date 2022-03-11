@@ -1,0 +1,10 @@
+.container {
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items:center;
+  justify-content: center;
+  gap: 10px;
+  border: 1px solid blue;
+}
