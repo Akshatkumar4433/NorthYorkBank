@@ -1,8 +1,11 @@
-var express = require('express');
-var router = express.Router();
-var login = require('./login')
+const express = require('express');
+const router = express.Router();
+const login = require('./login')
+const profile = require('./profile')
 
 /* GET home page. */
-router.get('/',login);
-
-module.exports = router;
+module.exports = () => {
+  router.get('/',login);
+  //router.get('/profile', profile)
+  return router
+}
