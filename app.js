@@ -19,7 +19,7 @@ var routes = require('./routes');
 var app = express();
 var port = 8000;
 
-
+ require('./config/passport')(passport);
 
 var configDB = require('./config/database.js')
 mongoose.connect(configDB.url)
