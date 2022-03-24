@@ -1,27 +1,34 @@
-<div class="container">
+<div class = 'card'>
+  <div class = 'card-body'>
+    <i class = 'material-icons md-18'>face</i>
+    <p class = 'card-title card-email'><%=user.local.email-%></p>
+  <h6 class="card-subtitle mb-2 text-muted">Account Details</h6>
+    <table class = 'table table-hover table-bordered'>
 
-        <div class="page-header text-center">
-            <h1><span class="fa fa-anchor"></span> Profile Page</h1>
-            <a href="/logout" class="btn btn-default btn-sm">Logout</a>
-        </div>
 
-        <div class="row">
 
-            <!-- LOCAL INFORMATION -->
-            <div class="col-sm-6">
-                <div class="well">
-                    <h3><span class="fa fa-user"></span> Local</h3>
+    <tr>
+    <th scope = 'row'>Balance</th>
+    <td><%=user.local.debitAmount-%></td>
+      </tr>
+      <tr>
+      <th scope = 'row'>Credit</th>
+      <td><%=user.local.creditAmount-%></td>
+        </tr>
 
-                        <p>
-                            <strong>id</strong>: <%= user._id %><br>
-                            <strong>email</strong>: <%= user.local.email %><br>
-                            <strong>password</strong>: <%= user.local.password %>
-                            <%= user.local.creditScore -%>
-                        </p>
+        <tr>
+        <th scope = 'row'>Credit Score</th>
+        <td><%=user.local.creditScore-%></td>
+          </tr>
 
-                </div>
-            </div>
-
-        </div>
-
-    </div>
+          <tr>
+          <th scope = 'row'>Credit Card</th>
+          <td><%=user.local.creditCardNumber-%></td>
+            </tr>
+            <tr>
+            <th scope = 'row'>Debit Card</th>
+            <td><%=user.local.debitCardNumber-%></td>
+              </tr>
+    </table>
+  </div>
+</div>
